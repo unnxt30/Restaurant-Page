@@ -1,6 +1,7 @@
 import loadHome from "./home.js"
 import loadMenu from "./menu.js"
-import aboutpage from "./about.js"
+import loadAbout from "./aboutus.js";
+
 
 loadHome();
 const content = document.getElementById("content");
@@ -14,7 +15,7 @@ home_button.onclick = () =>{
     {
         content.removeChild(loadMenu());
     }
-    else if (loadAbout())
+    if (loadAbout())
     {
         content.removeChild(loadAbout())
     }
@@ -26,7 +27,7 @@ menu_button.onclick = () =>{
     if(loadHome()){
         content.removeChild(loadHome())
     }
-    else if (loadAbout())
+    if (loadAbout())
     {
         content.removeChild(loadAbout())
     }
@@ -35,5 +36,12 @@ menu_button.onclick = () =>{
 }
 
 about_button.onclick = () =>{
-    aboutpage();
+    if(loadHome()){
+        content.removeChild(loadHome())
+    }
+    if (loadMenu())
+    {
+        content.removeChild(loadMenu())
+    }
+    loadAbout();
 }

@@ -1,7 +1,7 @@
 const header = document.querySelector('.header');
 
 const about = document.createElement("div");
-about.setAttribute('class', 'about');
+about.setAttribute('class', 'about');   
 
 const about_container = document.createElement('div');
 about_container.setAttribute('class', 'about_container');
@@ -19,9 +19,8 @@ about.appendChild(about_container);
 
 
 function loadAbout(){
-    // header.insertAdjacentElement("afterend", about);
-    // return about;
-    alert("hello");
+    header.insertAdjacentElement("afterend", about);
+    return about;
 }
 
 export default loadAbout;
