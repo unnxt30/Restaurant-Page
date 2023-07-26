@@ -21,6 +21,7 @@ body{
     background-size: cover ;
     background-repeat: no-repeat;
     background-image: url(imgs/bg2.jpg);
+    background-attachment: fixed;
 }
 
 .header
@@ -75,10 +76,18 @@ body{
     /* background-color: #c4894f; */
 }
 
-.home{
+#home_container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .quoteBox
@@ -90,7 +99,7 @@ body{
     justify-content: space-between;
     padding: 25px;
     height: 350px;
-    width: 800px;
+    width: 850px;
     background-color: rgb(83, 67, 49, 0.5);
     border-radius: 20px;
 }
@@ -129,7 +138,7 @@ body{
 }
 
 .footer{
-    margin-top: 50px;
+    /* margin-top: 30px; */
     background-color: black;
     color: white;
     display: flex;
@@ -167,8 +176,9 @@ body{
 	align-items: center;
 	justify-content: space-around;
 	/* flex: 1; */
-	padding: 10px;
-	background-color: #826445;
+	padding: 5px;
+	background-color:rgb(130, 100, 69);;
+    
 }
 
 .showcase>div
@@ -176,17 +186,142 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 8px;
+	/* gap: 8px; */
 }
 
-.columns img{
+.column img{
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
+/* 
+.column img:hover{
+    transform: scale(1.05);
+} */
+
 .column span{
-    font-family: 'Lato';
+    font-family: 'Lora';
     font-size: 17px;
+    color: black;
+    transition: color 1s linear; 
+    transition: transform 1s ease;
+    -moz-transition: color 1s linear;  
+    -webkit-transition: color 1s linear; 
+    -ms-transition: color 1s linear; 
+}
+
+.column span:hover{
     color: white;
+}
+
+body{
+	margin: 0;
+	background-color: #897057;
+}
+
+.menu{
+	
+    margin-top: 50px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+    margin-bottom: 50px;
+	
+}
+
+.menuGrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	background-color: rgb(251, 244, 227, 0.8);
+	border-radius: 8px;
+	width: 700px;
+	padding: 20px;
+	
+}
+
+#item
+{
+	justify-self: center;
+	align-self: center;
+	height: 300px;
+	background-color: rgb(255, 255, 255);
+	padding: 5px;
+	width: 300px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#item:hover{
+    background-color: rgb(238, 235, 235);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.product{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+}
+
+.product span{
+	font-family: 'Playfair Display';
+	font-size: 30px;
+}
+
+#price
+{
+	color: green;
+    font-family: 'Lora';
+	font-size: 19px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.about_container{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 28px;
+    font-family: 'Abhaya Libre';
+    text-align: center;
+    border-radius: 15px;
+    gap: 13px;
+    color: white;
+    
+    transition: color 1s linear; 
+    transition: transform 1s ease;
+    -moz-transition: color 1s linear;  
+    -webkit-transition: color 1s linear; 
+    -ms-transition: color 1s linear; 
+
+    transition: background-color 1s linear; 
+    transition: transform 1s ease;
+    -moz-transition: background-color 1s linear;  
+    -webkit-transition: background-color 1s linear; 
+    -ms-transition: background-color 1s linear;
+}
+
+.about_container:hover
+{
+    background-color: white;
+    color: black;
 }
